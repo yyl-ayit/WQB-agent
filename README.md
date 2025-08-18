@@ -26,6 +26,7 @@ world_quant_brain/
 │── my_fun.py                       # 定义好的功能代码
 │── server.py                       # Mcp协议的api文件
 │── static_server.py                # 静态地址映射，主要是用于web页面的图片可视化
+│── test_new_memo.py                # 生成db向量库
 ├── fields.json                     # 平台的数据集集合
 │── operators.json                  # 平台的操作符集合
 │── big_text.txt                    # 处理后的社区的帖子数据
@@ -53,6 +54,7 @@ lopp_submit/
 
 ```bash
 cd world_quant_brain
+python test_new_memo.py # 生成db向量库
 python static_server.py
 ```
 
@@ -131,4 +133,5 @@ python static_server.py
 
 
 **注意**：本项目为个人开发，旨在展示 AI 驱动的研究工作流。生产环境请确保完善安全、验证与异常处理。
+
 
