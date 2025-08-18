@@ -94,7 +94,7 @@ python static_server.py
 
 ## 🛠️ 配置
 
-### LLM 配置
+### 配置
 
 编辑 `brain_credentials_copy` 可自定义：
 
@@ -127,5 +127,6 @@ python static_server.py
 - 参考示例用法
 
 ---
+
 
 **注意**：本项目为个人开发，旨在展示 AI 驱动的研究工作流。生产环境请确保完善安全、验证与异常处理。
