@@ -1,0 +1,871 @@
+[
+    {
+        "name": "add",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "add(x, y, filter = false), x + y",
+        "description": "Add all inputs (at least 2 inputs required). If filter = true, filter all input NaN to 0 before adding",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "multiply",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "multiply(x ,y, ... , filter=false), x * y",
+        "description": "Multiply all inputs. At least 2 inputs are required. Filter sets the NaN values to 1",
+        "documentation": "/operators/multiply",
+        "level": "ALL"
+    },
+    {
+        "name": "sign",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "sign(x)",
+        "description": "if input = NaN; return NaN",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "subtract",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "subtract(x, y, filter=false), x - y",
+        "description": "x-y. If filter = true, filter all input NaN to 0 before subtracting",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "pasteurize",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "pasteurize(x)",
+        "description": "Set to NaN if x is INF or if the underlying instrument is not in the Alpha universe. This operator may help reduce outliers.",
+        "documentation": null,
+        "level": null
+    },
+    {
+        "name": "log",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "log(x)",
+        "description": "Natural logarithm. For example: Log(high/low) uses natural logarithm of high/low ratio as stock weights.",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "max",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "max(x, y, ..)",
+        "description": "Maximum value of all inputs. At least 2 inputs are required",
+        "documentation": "/operators/max",
+        "level": "ALL"
+    },
+    {
+        "name": "abs",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "abs(x)",
+        "description": "Absolute value of x",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "divide",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "divide(x, y), x / y",
+        "description": "x / y",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "min",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "min(x, y ..)",
+        "description": "Minimum value of all inputs. At least 2 inputs are required",
+        "documentation": "/operators/min",
+        "level": "ALL"
+    },
+    {
+        "name": "signed_power",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "signed_power(x, y)",
+        "description": "x raised to the power of y such that final result preserves sign of x",
+        "documentation": "/operators/signed_power",
+        "level": "ALL"
+    },
+    {
+        "name": "inverse",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "inverse(x)",
+        "description": "1 / x",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "sqrt",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "sqrt(x)",
+        "description": "Square root of x",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "reverse",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "reverse(x)",
+        "description": " - x",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "power",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "power(x, y)",
+        "description": "x ^ y",
+        "documentation": "/operators/power",
+        "level": "ALL"
+    },
+    {
+        "name": "densify",
+        "category": "Arithmetic",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "densify(x)",
+        "description": "Converts a grouping field of many buckets into lesser number of only available buckets so as to make working with grouping fields computationally efficient",
+        "documentation": "/operators/densify",
+        "level": "ALL"
+    },
+    {
+        "name": "or",
+        "category": "Logical",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "or(input1, input2)",
+        "description": "Logical OR operator returns true if either or both inputs are true and returns false otherwise",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "and",
+        "category": "Logical",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "and(input1, input2)",
+        "description": "Logical AND operator, returns true if both operands are true and returns false otherwise",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "not",
+        "category": "Logical",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "not(x)",
+        "description": "Returns the logical negation of x. If x is true (1), it returns false (0), and if input is false (0), it returns true (1).",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "is_nan",
+        "category": "Logical",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "is_nan(input)",
+        "description": "If (input == NaN) return 1 else return 0",
+        "documentation": "/operators/is_nan",
+        "level": "ALL"
+    },
+    {
+        "name": "less",
+        "category": "Logical",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "input1 < input2",
+        "description": "If input1 < input2 return true, else return false",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "equal",
+        "category": "Logical",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "input1 == input2",
+        "description": "Returns true if both inputs are same and returns false otherwise",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "greater",
+        "category": "Logical",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "input1 > input2",
+        "description": "Logic comparison operators to compares two inputs",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "if_else",
+        "category": "Logical",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "if_else(input1, input2, input 3)",
+        "description": "If input1 is true then return input2 else return input3.",
+        "documentation": "/operators/if_else",
+        "level": "ALL"
+    },
+    {
+        "name": "not_equal",
+        "category": "Logical",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "input1!= input2",
+        "description": "Returns true if both inputs are NOT the same and returns false otherwise",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "less_equal",
+        "category": "Logical",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "input1 <= input2",
+        "description": "Returns true if input1 <= input2, return false otherwise",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "greater_equal",
+        "category": "Logical",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "input1 >= input2",
+        "description": "Returns true if input1 >= input2, return false otherwise",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_corr",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_corr(x, y, d)",
+        "description": "Returns correlation of x and y for the past d days",
+        "documentation": "/operators/ts_corr",
+        "level": "ALL"
+    },
+    {
+        "name": "ts_zscore",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_zscore(x, d)",
+        "description": "Z-score is a numerical measurement that describes a value's relationship to the mean of a group of values. Z-score is measured in terms of standard deviations from the mean: (x - tsmean(x,d)) / tsstddev(x,d). This operator may help reduce outliers and drawdown.",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_returns",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_returns (x, d, mode = 1)",
+        "description": "Returns the relative change in the x value",
+        "documentation": "/operators/ts_returns",
+        "level": null
+    },
+    {
+        "name": "ts_product",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_product(x, d)",
+        "description": "Returns product of x for the past d days",
+        "documentation": "/operators/ts_product",
+        "level": "ALL"
+    },
+    {
+        "name": "ts_std_dev",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_std_dev(x, d)",
+        "description": "Returns standard deviation of x for the past d days",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_backfill",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_backfill(x,lookback = d, k=1, ignore=\"NAN\")",
+        "description": "Backfill is the process of replacing the NAN or 0 values by a meaningful value (i.e., a first non-NaN value)",
+        "documentation": "/operators/ts_backfill",
+        "level": "ALL"
+    },
+    {
+        "name": "days_from_last_change",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "days_from_last_change(x)",
+        "description": "Amount of days since last change of x",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "last_diff_value",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "last_diff_value(x, d)",
+        "description": "Returns last x value not equal to current x value from last d days",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_scale",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_scale(x, d, constant = 0)",
+        "description": "Returns (x - ts_min(x, d)) / (ts_max(x, d) - ts_min(x, d)) + constant. This operator is similar to scale down operator but acts in time series space",
+        "documentation": "/operators/ts_scale",
+        "level": "ALL"
+    },
+    {
+        "name": "ts_step",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_step(1)",
+        "description": "Returns days' counter",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_sum",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_sum(x, d)",
+        "description": "Sum values of x for the past d days.",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_av_diff",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_av_diff(x, d)",
+        "description": "Returns x - tsmean(x, d), but deals with NaNs carefully. That is NaNs are ignored during mean computation",
+        "documentation": "/operators/ts_av_diff",
+        "level": "ALL"
+    },
+    {
+        "name": "ts_kurtosis",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_kurtosis(x, d)",
+        "description": "Returns kurtosis of x for the last d days",
+        "documentation": "/operators/ts_kurtosis",
+        "level": null
+    },
+    {
+        "name": "ts_mean",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_mean(x, d)",
+        "description": "Returns average value of x for the past d days.",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_arg_max",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_arg_max(x, d)",
+        "description": "Returns the relative index of the max value in the time series for the past d days. If the current day has the max value for the past d days, it returns 0. If previous day has the max value for the past d days, it returns 1",
+        "documentation": "/operators/ts_arg_max",
+        "level": "ALL"
+    },
+    {
+        "name": "ts_rank",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_rank(x, d, constant = 0)",
+        "description": "Rank the values of x for each instrument over the past d days, then return the rank of the current value + constant. If not specified, by default, constant = 0.",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_ir",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_ir(x, d)",
+        "description": "Return information ratio ts_mean(x, d) / ts_std_dev(x, d)",
+        "documentation": null,
+        "level": null
+    },
+    {
+        "name": "ts_delay",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_delay(x, d)",
+        "description": "Returns x value d days ago",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_quantile",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_quantile(x,d, driver=\"gaussian\" )",
+        "description": "It calculates ts_rank and apply to its value an inverse cumulative density function from driver distribution. Possible values of driver (optional ) are \"gaussian\", \"uniform\", \"cauchy\" distribution where \"gaussian\" is the default.",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_count_nans",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_count_nans(x ,d)",
+        "description": "Returns the number of NaN values in x for the past d days",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_covariance",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_covariance(y, x, d)",
+        "description": "Returns covariance of y and x for the past d days",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_decay_linear",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_decay_linear(x, d, dense = false)",
+        "description": "Returns the linear decay on x for the past d days. Dense parameter=false means operator works in sparse mode and we treat NaN as 0. In dense mode we do not.",
+        "documentation": "/operators/ts_decay_linear",
+        "level": "ALL"
+    },
+    {
+        "name": "ts_arg_min",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_arg_min(x, d)",
+        "description": "Returns the relative index of the min value in the time series for the past d days; If the current day has the min value for the past d days, it returns 0; If previous day has the min value for the past d days, it returns 1.",
+        "documentation": "/operators/ts_arg_min",
+        "level": "ALL"
+    },
+    {
+        "name": "ts_regression",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_regression(y, x, d, lag = 0, rettype = 0)",
+        "description": "Returns various parameters related to regression function",
+        "documentation": "/operators/ts_regression",
+        "level": "ALL"
+    },
+    {
+        "name": "ts_max_diff",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_max_diff(x, d)",
+        "description": "Returns x - ts_max(x, d)",
+        "documentation": null,
+        "level": null
+    },
+    {
+        "name": "kth_element",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "kth_element(x, d, k)",
+        "description": "Returns K-th value of input by looking through lookback days. This operator can be used to backfill missing data if k=1",
+        "documentation": "/operators/kth_element",
+        "level": "ALL"
+    },
+    {
+        "name": "hump",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "hump(x, hump = 0.01)",
+        "description": "Limits amount and magnitude of changes in input (thus reducing turnover)",
+        "documentation": "/operators/hump",
+        "level": "ALL"
+    },
+    {
+        "name": "ts_delta",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_delta(x, d)",
+        "description": "Returns x - ts_delay(x, d)",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "ts_target_tvr_decay",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_target_tvr_decay(x, lambda_min=0, lambda_max=1, target_tvr=0.1)",
+        "description": "Tune \"ts_decay\" to have a turnover equal to a certain target, with optimization weight range between lambda_min, lambda_max",
+        "documentation": null,
+        "level": null
+    },
+    {
+        "name": "ts_target_tvr_hump",
+        "category": "Time Series",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "ts_target_tvr_hump(x, lambda_min=0, lambda_max=1, target_tvr=0.1)",
+        "description": "Tune \"hump\" to have a turnover equal to a certain target with optimization weight range between lambda_min, lambda_max.",
+        "documentation": null,
+        "level": null
+    },
+    {
+        "name": "winsorize",
+        "category": "Cross Sectional",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "winsorize(x, std=4)",
+        "description": "Winsorizes x to make sure that all values in x are between the lower and upper limits, which are specified as multiple of std.",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "rank",
+        "category": "Cross Sectional",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "rank(x, rate=2)",
+        "description": "Ranks the input among all the instruments and returns an equally distributed number between 0.0 and 1.0. For precise sort, use the rate as 0",
+        "documentation": "/operators/rank",
+        "level": "ALL"
+    },
+    {
+        "name": "vector_neut",
+        "category": "Cross Sectional",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "vector_neut(x, y)",
+        "description": "For given vectors x and y, it finds a new vector x* (output) such that x* is orthogonal to y",
+        "documentation": "/operators/vector_neut",
+        "level": null
+    },
+    {
+        "name": "zscore",
+        "category": "Cross Sectional",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "zscore(x)",
+        "description": "Z-score is a numerical measurement that describes a value's relationship to the mean of a group of values. Z-score is measured in terms of standard deviations from the mean",
+        "documentation": "/operators/zscore",
+        "level": "ALL"
+    },
+    {
+        "name": "scale",
+        "category": "Cross Sectional",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "scale(x, scale=1, longscale=1, shortscale=1)",
+        "description": "Scales input to booksize. We can also scale the long positions and short positions to separate scales by mentioning additional parameters to the operator",
+        "documentation": "/operators/scale",
+        "level": "ALL"
+    },
+    {
+        "name": "normalize",
+        "category": "Cross Sectional",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "normalize(x, useStd = false, limit = 0.0)",
+        "description": "Calculates the mean value of all valid alpha values for a certain date, then subtracts that mean from each element",
+        "documentation": "/operators/normalize",
+        "level": "ALL"
+    },
+    {
+        "name": "quantile",
+        "category": "Cross Sectional",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "quantile(x, driver = gaussian, sigma = 1.0)",
+        "description": "Rank the raw vector, shift the ranked Alpha vector, apply distribution (gaussian, cauchy, uniform). If driver is uniform, it simply subtract each Alpha value with the mean of all Alpha values in the Alpha vector",
+        "documentation": "/operators/quantile",
+        "level": "ALL"
+    },
+    {
+        "name": "vec_sum",
+        "category": "Vector",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "vec_sum(x)",
+        "description": "Sum of vector field x",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "vec_avg",
+        "category": "Vector",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "vec_avg(x)",
+        "description": "Taking mean of the vector field x",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "bucket",
+        "category": "Transformational",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "bucket(rank(x), range=\"0, 1, 0.1\" or buckets = \"2,5,6,7,10\")",
+        "description": "Convert float values into indexes for user-specified buckets. Bucket is useful for creating group values, which can be passed to GROUP as input",
+        "documentation": "/operators/bucket",
+        "level": "ALL"
+    },
+    {
+        "name": "tail",
+        "category": "Transformational",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "tail(x, lower = 0, upper = 0, newval = 0)",
+        "description": "If (x > lower AND x < upper) return newval, else return x. Lower, upper, newval should be constants",
+        "documentation": "/operators/tail",
+        "level": null
+    },
+    {
+        "name": "trade_when",
+        "category": "Transformational",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "trade_when(x, y, z)",
+        "description": "Used in order to change Alpha values only under a specified condition and to hold Alpha values in other cases. It also allows to close Alpha positions (assign NaN values) under a specified condition",
+        "documentation": "/operators/trade_when",
+        "level": "ALL"
+    },
+    {
+        "name": "group_mean",
+        "category": "Group",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "group_mean(x, weight, group)",
+        "description": "All elements in group equals to the mean",
+        "documentation": "/operators/group_mean",
+        "level": "ALL"
+    },
+    {
+        "name": "group_rank",
+        "category": "Group",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "group_rank(x, group)",
+        "description": "Each elements in a group is assigned the corresponding rank in this group",
+        "documentation": "/operators/group_rank",
+        "level": "ALL"
+    },
+    {
+        "name": "group_backfill",
+        "category": "Group",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "group_backfill(x, group, d, std = 4.0)",
+        "description": "If a certain value for a certain date and instrument is NaN, from the set of same group instruments, calculate winsorized mean of all non-NaN values over last d days",
+        "documentation": "/operators/group_backfill",
+        "level": "ALL"
+    },
+    {
+        "name": "group_scale",
+        "category": "Group",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "group_scale(x, group)",
+        "description": "Normalizes the values in a group to be between 0 and 1. (x - groupmin) / (groupmax - groupmin)",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "group_count",
+        "category": "Group",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "group_count(x, group)",
+        "description": "Gives the number of instruments in the same group (e.g. sector) which have valid values of x. For example, x=1 gives the number of instruments in each group (without regard for whether any particular field has valid data). This operator improves weight coverage and may help to reduce drawdown risk.",
+        "documentation": null,
+        "level": null
+    },
+    {
+        "name": "group_zscore",
+        "category": "Group",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "group_zscore(x, group)",
+        "description": "Calculates group Z-score - numerical measurement that describes a value's relationship to the mean of a group of values. Z-score is measured in terms of standard deviations from the mean. zscore = (data - mean) / stddev of x for each instrument within its group.",
+        "documentation": null,
+        "level": "ALL"
+    },
+    {
+        "name": "group_std_dev",
+        "category": "Group",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "group_std_dev(x, group)",
+        "description": "All elements in group equals to the standard deviation of the group.",
+        "documentation": null,
+        "level": null
+    },
+    {
+        "name": "group_sum",
+        "category": "Group",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "group_sum(x, group)",
+        "description": "Sum of x for all instruments in the same group.",
+        "documentation": null,
+        "level": null
+    },
+    {
+        "name": "group_neutralize",
+        "category": "Group",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "group_neutralize(x, group)",
+        "description": "Neutralizes Alpha against groups. These groups can be subindustry, industry, sector, country or a constant",
+        "documentation": "/operators/group_neutralize",
+        "level": "ALL"
+    },
+    {
+        "name": "group_cartesian_product",
+        "category": "Group",
+        "scope": [
+            "REGULAR"
+        ],
+        "definition": "group_cartesian_product(g1, g2)",
+        "description": "Merge two groups into one group. If originally there are len_1 and len_2 group indices in g1 and g2, there will be len_1 * len_2 indices in the new group.",
+        "documentation": null,
+        "level": null
+    }
+]

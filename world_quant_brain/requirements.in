@@ -1,0 +1,11 @@
+google-adk
+litellm
+openai
+flask
+pandas
+pydantic
+requests
+matplotlib
+seaborn
+numpy
+chromadb
