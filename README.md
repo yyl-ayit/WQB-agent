@@ -43,10 +43,12 @@ lopp_submit/
 ### 前置条件
 
 - Python 3.10 或更高版本
+- 安装 Ollama `https://ollama.com/download`
 
 ### 安装步骤
 
 - `pip install -r requirements.txt`
+- ollama pull bge-m3
 
 ## 🚀 快速开始
 
@@ -133,5 +135,6 @@ python static_server.py
 
 
 **注意**：本项目为个人开发，旨在展示 AI 驱动的研究工作流。生产环境请确保完善安全、验证与异常处理。
+
 
 
