@@ -16,7 +16,7 @@ alpha = {'type': 'REGULAR',
                       'unitHandling': 'VERIFY', 'nanHandling': 'OFF', 'language': 'FASTEXPR', 'visualization': False},
          'regular': 'group_rank(-ts_sum(winsorize(ts_backfill(vec_avg(anl4_guiqfv4_est), 120), std=4), 66),densify(market))'}
 
-
+ 
 def login():
     with open(expanduser('brain_credentials_copy')) as f:
         credentials = eval(f.read())
@@ -142,3 +142,4 @@ tem = locate_alpha(session, alpha_id_ori)
 # 将 alpha 信息列表解包并赋值给对应的变量
 [alpha_id, sharpe, turnover, fitness, margin, exp, region, universe, neutralization, decay, delay, truncation] = tem
 print(alpha_id, sharpe, turnover, fitness, margin, exp, region, universe, neutralization, decay, delay, truncation)
+
